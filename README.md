@@ -13,7 +13,7 @@ Design库针对view的动作处理进行了优化，实现view的动作更加方
 
 首先我们先简单看一下他的结构组成：
 
-<img src="http://7xry4c.com1.z0.glb.clouddn.com/mjn/1466155214235.png" width="377"/>
+![这里写图片描述](http://7xry4c.com1.z0.glb.clouddn.com/mjn/1466155214235.png)
 最外层就是Design库中的CoordinatorLayout。这是Design库中非常重要的一个控件，正是它实现了子view的联动，使下拉刷新的实现变得简单。
 下面是具体的布局：
 ```xml
