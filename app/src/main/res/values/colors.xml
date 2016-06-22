@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="reflection_default_from">#aa000000</color>
+    <color name="reflection_default_to">#00000000</color>
+    <color name="darkdark_gray">#ff333333</color>
+    <color name="reflection_shortcut_pressed">#20000000</color>
+
+    <color name="third_transparent_black">#d0000000</color>
+
+    <color name="medium_gray">#7A7A7A</color>
+    <color name="orange">#f97d03</color>
+    <color name="dark">#000000</color>
+    <color name="blue">#00a2dc</color>
+    <color name="black">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="gray">#cccccc</color>
+
+    <color name="dark_gray">#ff474747</color>
+    <color name="toast_black">#a4000000</color>
+    <color name="light_gray">#ffdddddd</color>
+    <color name="tran_gray">#3a666666</color>
+    <color name="transparent_black">#cc000000</color>
+    <color name="transparent_dark">#aa000000</color>
+    <color name="blue_light">#ff1793da</color>
+    <color name="blue_dark">#ff1881bc</color>
+    <color name="blue_fill">#ffc2e2f4</color>
+    <color name="green_light">#ff86d046</color>
+    <color name="green_dark">#ff669900</color>
+    <color name="green_fill">#ffdaf0c1</color>
+    <color name="pink_light">#ffcd2ed7</color>
+    <color name="pink_dark">#ff9a20ac</color>
+    <color name="pink_fill">#ffebc3f2</color>
+    <color name="yellow_light">#ffefa717</color>
+    <color name="yellow_dark">#ffed8d18</color>
+    <color name="purple_light">#ff9154d4</color>
+    <color name="purple_dark">#ff70419e</color>
+    <color name="orange_light">#ffed792e</color>
+    <color name="orange_dark">#ffd4612f</color>
+    <color name="disabled_top">#440099dd</color>
+    <color name="disabled_bottom">#440066aa</color>
+    <color name="tran_white">#ccffffff</color>
+    <color name="devider_color">#ffe6e5e5</color>
+    <color name="pingyintitle_color">#f8f9fa</color>
+    <color name="info_orange">#e3e5e7</color>
+    <color name="maptext">#f2f2f2</color>
+    <color name="message_list_item_background_unread">#404040</color>
+    <color name="message_list_item_background_read">#000000</color>
+    <color name="publish_navigation">#ffb6b6b5</color>
+    <color name="publish_navigation_text">#fff97d03</color>
+    <color name="line">#ffcecece</color>
+    <color name="list_text">#55585b</color>
+    <color name="prompt_text">#A8A8A8</color>
+    <color name="edit_text">#c2c2c2</color>
+    <color name="main_title_text">#ff373737</color>
+    <color name="sub_title_text">#9b9b9b</color>
+
+    <color name="template_tip_text">#ffa2a1a1</color>
+    <color name="orange_dark_gray">#fd8d33</color>
+    <color name="activity_bg_gray">#f2f2f2</color>
+
+    <color name="public_item">#ff373737</color>
+    <color name="manager_text">#ff565962</color>
+
+    <!-- 首页bar的字色 -->
+    <color name="main_view_text_pressed">#3f4144</color>
+    <color name="main_view_text_normal">#aaaaab</color>
+    <color name="main_view_driver_color">#e6e6e6</color>
+    <!-- 切换城市的分隔线的颜色 -->
+    <color name="changecity_divide">#373737</color>
+
+    <!-- 团购类别的字色 -->
+    <color name="category_cate_pressed">#ff8e00</color>
+    <color name="category_item_pressed">#e3e5e7</color>
+    <color name="map_frame">#dadadb</color>
+    <color name="activity_main_bg">#f8f9fa</color>
+
+    <!-- 订阅时间设置 -->
+    <color name="rss_text_red">#ff4e00</color>
+    <color name="setting_text_tip">#B7B7B7</color>
+    <color name="setting_text_rate">#B3B5B6</color>
+
+    <!-- 加载框的背景色 -->
+    <color name="request_loading">#c0000000</color>
+
+    <!-- 新版本v2.0颜色值的提取 -->
+    <color name="dimgray">#18191A</color>
+    <color name="darkorange">#FF7800</color>
+    <color name="lightgray">#9B9B9B</color>
+    <color name="lightslategray">#5c677d</color>
+    <color name="firebrick">#fd553f</color>
+    <color name="silver">#444444</color>
+    <color name="orangered">#ff6c00</color>
+    <color name="whitesmoke">#ffffffff</color>
+    <color name="ghostwhite">#ffffff</color>
+    <color name="gainsboro">#cecece</color>
+    <color name="darkgray">#9e9e9e</color>
+    <color name="silver1">#cccaca</color>
+
+    <!-- 别表信用度和价钱字色 -->
+    <color name="category_price_text_price">#ff7800</color>
+    <color name="category_price_text_credit">#fd553f</color>
+
+    <color name="manager_list_item_pressed">#ffa6a6a6</color>
+
+    <color name="manager_list_item_second">#ff636d82</color>
+    <color name="manager_list_item_third">#ff8c8c8c</color>
+    <!-- map使用的颜色 -->
+    <color name="maptitle">#000000</color>
+    <color name="maparea">#373737</color>
+    <color name="mapphone">#0079f1</color>
+    <color name="maphinttext">#959595</color>
+    <color name="mapcontact">#4D4D4D</color>
+    <color name="white">#ffffff</color>
+    <color name="declaration_jinli_text">#FFF</color>
+    <color name="declaration_moto_text">#ffffffff</color>
+    <color name="declaration_thundersoft_text">#FFF</color>
+    <color name="quit_dialog_text_color">#ffffffff</color>
+    <color name="update_dialog_text_color">#ffffffff</color>
+    <color name="menu_update_motification_textcolor">#000000</color>
+    <color name="network_invailable_textcolor">#ffffffff</color>
+    <color name="overlay_textcolor">#3399ff</color>
+    <color name="overlay_background">#ffffff</color>
+    <color name="select_city_alpha_text_background">#40000000</color>
+    <color name="select_city_listitem_devider">#cecece</color>
+    <color name="select_city_alpha_textcolor">#99CCFF</color>
+
+
+    <color name="search_pannel_bg">#F6F6F6</color>
+    <color name="search_target_cate_color">#808A96</color>
+    <color name="search_target_count">#808080</color>
+    <color name="search_selectcate_btn_text">#ff662c</color>
+    <color name="search_prompt_count_textcolor">#777777</color>
+    <color name="search_recomment_textcolor">#ff7800</color>
+    <color name="search_recomment_item_textcolor">#373737</color>
+    <color name="transparent">#00000000</color>
+    <color name="list_item_pressed">#EBE8E1</color>
+    <color name="divide_line_color2">#D8D7D5</color>
+    <color name="city_overlay_text_color">#ff7800</color>
+
+    <color name="wb_textedit_hit">#C6CBD2</color>
+    <color name="login_forget_password_color">#ff6a22</color>
+    <color name="login_login_ensure_color">#e3e5e6</color>
+    <color name="login_bottom_text_hint_color">#666666</color>
+
+    <color name="login_pwd_message">#555555</color>
+    <color name="wb_login_text">#232528</color>
+    <color name="wb_separator_line">#D5DADE</color>
+    <color name="wb_list_item_pressed">#f4f4f4</color>
+    <!-- im使用 -->
+    <color name="im_chatroom_record_text">#666B72</color>
+    <color name="wb_im_manager_group_text_normal_color">#373737</color>
+    <color name="wb_im_manager_group_text_pressed_color">#ff5400</color>
+    <color name="wb_im_friend_list_item_normal_color">#f8f9fa</color>
+    <color name="wb_im_friend_list_item_pressed_color">#e3e4e4</color>
+    <!--home search  -->
+    <color name="wb_home_search_header_textcolor">#b9bab9</color>
+    <color name="wb_home_search_btn_textcolor">#ff6a22</color>
+    <color name="wb_home_search_item_color">#00ffffff</color>
+    <color name="wb_home_search_item_press_color">#32ffffff</color>
+    <color name="wb_home_search_prompt_count_color">#b2b2b2</color>
+    <color name="wb_home_search_progress_color">#ff890f</color>
+    <color name="wb_home_search_listview_divider">#dddddc</color>
+    <color name="wb_btn_disable">#55ffffff</color>
+    <color name="wb_empty_search_history_textcolor">#c9ccd0</color>
+
+    <!-- 发布助手 -->
+    <color name="assistant_gallery_title_bg">#60000000</color>
+    <color name="assistant_verification_input_prompt">#635f5f</color>
+    <color name="assistant_verification_prompt">#a1a2a2</color>
+    <color name="assistant_verification_verify_text">#242526</color>
+    <color name="assistant_main_intro_text">#838588</color>
+    <color name="assistant_main_start_enjoy">#ffffff</color>
+    <color name="assistant_main_later_enjoy">#191919</color>
+    <color name="assistant_verification_help_bg">#80000000</color>
+
+    <!-- 发布 -->
+    <color name="publish_gallery_bg">#3B3F45</color>
+    <color name="publish_txt_bg">#767672</color>
+    <color name="publish_add_pic_txt_bg">#d9d9d9</color>
+    <color name="publish_camera_bottom_bg">#68000000</color>
+    <color name="publish_title_mypublish_text_color">#ff6a22</color>
+
+    <!-- Dialog -->
+    <color name="wb_quit_dialog_color">#495a6d</color>
+    <!-- 加载请求失败 -->
+    <color name="wb_request_loading_color">#495a6d</color>
+    <color name="wb_request_loading_color_5.0">#B2B2B2</color>
+    <!-- 进度条的颜色-->
+    <color name="wb_progress_start_color">#77ef3f</color>
+    <color name="wb_progress_center_color">#b8f86e</color>
+    <color name="wb_progress_end_color">#d7fe75</color>
+
+    <!-- 全局菜单按钮的文字颜色 -->
+    <color name="global_menu_text_enable_color">#ffffffff</color>
+    <color name="global_menu_text_disable_color">#6c6d6f</color>
+    <!-- 列表页 -->
+    <color name="infolist_tab_pressed">#ff6a22</color>
+    <color name="infolist_tab_normal">#808080</color>
+    <!-- 地图 -->
+    <color name="map_regoin_count">#bcbcbc</color>
+
+    <!-- 拍照 -->
+    <color name="tag_bg">#FFD700</color>
+    <color name="image_picker_description_color">#a6a6a6</color>
+    <color name="finish_text">#A2A2A2</color>
+    <!-- 团购筛选-->
+    <color name="wb_groupbuy_div">#e9e9e7</color>
+    <color name="wb_groupbuy_sec_bg">#e99341</color>
+    <!-- 筛选-->
+    <color name="wb_sift_list_div">#dddddd</color>
+    <color name="wb_sift_list_more_div">#cccccc</color>
+    <color name="wb_sift_list_first_text">#333333</color>
+    <color name="wb_sift_list_second_text">#5f5f5f</color>
+    <color name="wb_sift_btn_text_normal">#464b4f</color>
+    <color name="wb_sift_btn_text_pressed">#ff5400</color>
+    <color name="wb_sift_more_text_back">#5e5e5e</color>
+    <color name="wb_sift_more_content_select">#474747</color>
+    <color name="wb_sift_more_content_selnormal">#ababab</color>
+    <color name="wb_sift_logo_press">#b5b5b6</color>
+    <!-- 4.0 -->
+    <color name="white_title">#FEFEFE</color>
+    <color name="wb_background">#F9F9F9</color>
+    <color name="wb_title">#FF5B0A</color>
+
+    <!-- 首页 -->
+    <color name="home_no_browse_history">#C2C2C2</color>
+    <color name="home_has_browse_history">#999999</color>
+    <color name="home_history_pressed">#f6f6f6</color>
+    <color name="home_daojia_clicked">#f0f0f0</color>
+
+    <!-- 筛选记录 -->
+    <color name="wb_dialog">#464B4F</color>
+    <color name="sift_text_selector">#54BCDE</color>
+    <color name="sift_text_normal">#666666</color>
+
+    <!--全职招聘  -->
+    <color name="recruit_item_text_color">#333333</color>
+    <color name="recruit_background">#F1F0F0</color>
+    <color name="recruit_title_color">#414141</color>
+    <color name="recruit_view_all_text_color">#7d7d7d</color>
+    <color name="recruit_item_press_color">#1a000000</color>
+    <color name="recruit_personal_item_press_color">#6f747a</color>
+
+    <color name="wb_im_bg">#FAFAFA</color>
+    <color name="wb_im_pressed">#6f747a</color>
+    <color name="wb_im_line">#E0E0E0</color>
+    <color name="wb_im_quick_line">#EBEBEB</color>
+    <color name="wb_im_btn_unenabled">#ffaa84</color>
+
+    <color name="wb_record_time_color">#54BCDE</color>
+    <color name="wb_record_sec_color">#B7B7B7</color>
+    <!-- 快嘴秀 -->
+    <color name="kuaizuixiu_ad_color">#eeeeee</color>
+    <!-- 快嘴秀 -->
+    <!-- 抢房 -->
+    <color name="robhouse_text_normal">#474747</color>
+    <color name="robhouse_text_title">#5e5e5e</color>
+    <drawable name="robhouse_dialog_list_normal">#ffffff</drawable>
+    <!-- 抢房 -->
+    <!--IM来源 -->
+    <color name="im_source_title">#333333</color>
+    <color name="im_source_catename">#AAAFBA</color>
+    <color name="im_source_price">#FF7201</color>
+
+    <color name="weather_green">#29A532</color>
+    <color name="weather_light_green">#C5E801</color>
+    <color name="weather_orange">#F49A0B</color>
+    <color name="weather_red">#FB1C1C</color>
+    <color name="weather_purple">#AF00BF</color>
+    <color name="weather_dark_purple">#6000B1</color>
+    <!--首页平台化  -->
+    <color name="home_platform_title_color">#333333</color>
+    <color name="home_edaijia_btn_press">#4f000000</color>
+    <color name="home_platform_item_color">#3e4349</color>
+
+    <!-- 详情页翻页title -->
+    <color name="detail_pager_header_bg">#f3f3f0</color>
+    <color name="detail_pager_header_line_bg">#e9e9e7</color>
+    <color name="detail_pager_header_title_color">#929291</color>
+    <color name="detail_pager_header_subtext_color">#b2b2b2</color>
+    <color name="detail_pager_header_progress_bg">#ededeb</color>
+    <color name="detail_pager_header_progress_color">#ff550a</color>
+
+    <!-- 相册 -->
+    <color name="galleryItemSelectedOverlay">#5affffff</color>
+    <color name="whiteBackground">#ffffffff</color>
+
+    <!-- 引导图 -->
+    <color name="leading_bg">#cc000000</color>
+    <color name="leading_bg_1">#b200846a</color>
+    <color name="leading_bg_2">#b2eb4e00</color>
+    <color name="leading_bg_3">#b2d02641</color>
+    <color name="leading_bg_4">#b2e55400</color>
+    <!-- <color name="leading_btn_pressed">#ac3e1f</color>
+    <color name="leading_btn_normal">#f7592c</color> -->
+
+    <!-- 发布相关的Color -->
+    <color name="p_garbage_text_normal">#a3a3a3</color>
+    <color name="p_garbage_text_pressed">#454545</color>
+
+    <color name="list_sub_text_color_disable">#aaaaaa</color>
+    <color name="list_sub_text_color_open">#54bcde</color>
+
+    <!-- 消息中心相关色值 -->
+    <color name="message_center_list_item_text">#000000</color>
+    <color name="message_center_list_item_text_read">#808080</color>
+
+    <!--5.0新UI-->
+    <color name="title_bottom_line">#dddddd</color>
+    <color name="wb_new_title">#f8f8f8</color>
+    <color name="wb_title_text_color">#232528</color>
+
+    <!-- 个人中心 -->
+    <color name="personal_banner_name_pressed">#33FFFFFF</color>
+    <color name="personal_banner_text_gray">#F8F0E9</color>
+    <color name="personal_list_bg">#F7F7F7</color>
+    <color name="personal_list_bg_border">#D9D9D9</color>
+    <color name="personal_list_item_bg_pressed">#CCCCCC</color>
+    <color name="personal_list_text">#6A6F7C</color>
+
+    <color name="tel_feedback_title_color">#ff662c</color>
+    <color name="tel_feedback_second_title_color">#8a8e93</color>
+    <color name="tel_feedback_bottom_text_color">#666b72</color>
+    <!--   按钮文字变颜色定义的颜色资源 -->
+    <drawable name="wb_title_text_disabled">#fcb8a6</drawable>
+    <drawable name="wb_title_text_normal">#ff6622</drawable>
+    <drawable name="wb_title_text_pressed">#cc5223</drawable>
+
+    <!-- 登录注册 -->
+    <color name="login_register_light_gray">#C6CBD2</color>
+    <color name="login_bg_orange">#ff552e</color>
+    <!-- 获取手机验证码-->
+    <color name="phone_get_verify_normal">#ffffff</color>
+    <color name="phone_get_verify">#a6a6a6</color>
+    <color name="home_top_ad_fill_color">#ff6a22</color>
+
+    <!-- 分享-->
+    <color name="share_progress_bg">#BB000000</color>
+    <color name="share_bg">#ffffff</color>
+    <color name="share_btn_pressed_color">#e6e6e6</color>
+    <color name="weather_circle_trans_white_color">#80ffffff</color>
+    <color name="weather_circle_white_color">#fff</color>
+
+    <!-- 天气质量:0-50优 -->
+    <!--
+    <color name="weather_bg_start_color_good">#3ec348</color>
+    <color name="weather_bg_end_color_good">#37a940</color>-->
+    <color name="weather_bg_color_good">#9bcf57</color>
+    <color name="weather_cicle_bg_color_good">#8ec546</color>
+    <color name="weather_btn_bg_color_good">#7fbd2d</color>
+    <color name="weather_iaqi_text_color_good">#6aa818</color>
+    <color name="weather_iaqi_divider_color_good">#6aa818</color>
+    <!---<color name="weather_bottom_bg_start_color_good">#0e8418</color>
+    <color name="weather_bottom_bg_end_color_good">#1e9829</color>-->
+    <color name="weather_bottom_bg_color_good">#8ec546</color>
+    <color name="weather_bottom_date_text_color_good">#6aa818</color>
+
+    <!-- 天气质量:50-100良 -->
+    <!--<color name="weather_bg_start_color_moderate">#aed500</color>
+    <color name="weather_bg_end_color_moderate">#95b300</color>-->
+    <color name="weather_bg_color_moderate">#bbcf57</color>
+    <color name="weather_cicle_bg_color_moderate">#aec441</color>
+    <color name="weather_btn_bg_color_moderate">#a1b928</color>
+    <color name="weather_iaqi_text_color_moderate">#88a00e</color>
+    <color name="weather_iaqi_divider_color_moderate">#88a00e</color>
+    <!--<color name="weather_bottom_bg_start_color_moderate">#7f9b00</color>
+    <color name="weather_bottom_bg_end_color_moderate">#8ba800</color>-->
+    <color name="weather_bottom_bg_color_moderate">#aec441</color>
+    <color name="weather_bottom_date_text_color_moderate">#88a00e</color>
+
+    <!-- 天气质量:100-150轻度污染 -->
+    <!--<color name="weather_bg_start_color_lp">#ffa923</color>
+    <color name="weather_bg_end_color_lp">#e69400</color>-->
+    <color name="weather_bg_color_lp">#cfbc57</color>
+    <color name="weather_cicle_bg_color_lp">#c1ac3d</color>
+    <color name="weather_btn_bg_color_lp">#baa226</color>
+    <color name="weather_iaqi_text_color_lp">#a98f07</color>
+    <color name="weather_iaqi_divider_color_lp">#a98f07</color>
+    <!--<color name="weather_bottom_bg_start_color_lp">#c77400</color>
+    <color name="weather_bottom_bg_end_color_lp">#d18500</color>-->
+    <color name="weather_bottom_bg_color_lp">#c1ac3d</color>
+    <color name="weather_bottom_date_text_color_lp">#a98f07</color>
+
+    <!-- 天气质量:150-200中度污染 -->
+    <!--<color name="weather_bg_start_color_mp">#ff7170</color>
+    <color name="weather_bg_end_color_mp">#ed504f</color>-->
+    <color name="weather_bg_color_mp">#cfa357</color>
+    <color name="weather_cicle_bg_color_mp">#cb9840</color>
+    <color name="weather_btn_bg_color_mp">#c08c32</color>
+    <color name="weather_iaqi_text_color_mp">#b7790d</color>
+    <color name="weather_iaqi_divider_color_mp">#b7790d</color>
+    <!--<color name="weather_bottom_bg_start_color_mp">#d63c3b</color>
+    <color name="weather_bottom_bg_end_color_mp">#e54645</color>-->
+    <color name="weather_bottom_bg_color_mp">#cb9840</color>
+    <color name="weather_bottom_date_text_color_mp">#b7790d</color>
+
+    <!-- 天气质量:200-300重度污染 -->
+    <!--<color name="weather_bg_start_color_hp">#9d5aa6</color>
+    <color name="weather_bg_end_color_hp">#9726ab</color>-->
+    <color name="weather_bg_color_hp">#7b88a0</color>
+    <color name="weather_cicle_bg_color_hp">#6a7892</color>
+    <color name="weather_btn_bg_color_hp">#5c6c89</color>
+    <color name="weather_iaqi_text_color_hp">#505f7a</color>
+    <color name="weather_iaqi_divider_color_hp">#505f7a</color>
+    <!--<color name="weather_bottom_bg_start_color_hp">#77008c</color>
+    <color name="weather_bottom_bg_end_color_hp">#7f1c91</color>-->
+    <color name="weather_bottom_bg_color_hp">#6a7892</color>
+    <color name="weather_bottom_date_text_color_hp">#505f7a</color>
+
+    <!-- 天气质量:300-500严重污染 -->
+    <!--<color name="weather_bg_start_color_sp">#7a4bde</color>
+    <color name="weather_bg_end_color_sp">#421b96</color>-->
+    <color name="weather_bg_end_color_sp">#7b7b85</color>
+    <color name="weather_cicle_bg_color_sp">#70707a</color>
+    <color name="weather_btn_bg_color_sp">#64646d</color>
+    <color name="weather_iaqi_text_color_sp">#4f4f57</color>
+    <color name="weather_iaqi_divider_color_sp">#4f4f57</color>
+    <!--<color name="weather_bottom_bg_start_color_sp">#391980</color>
+    <color name="weather_bottom_bg_end_color_sp">#380b99</color>-->
+    <color name="weather_bottom_bg_color_sp">#70707a</color>
+    <color name="weather_bottom_date_text_color_sp">#4f4f57</color>
+
+    <!-- 天气质量:500+超重度污染 -->
+    <!--<color name="weather_bg_start_color_ssp">#656565</color>
+    <color name="weather_bg_end_color_ssp">#272727</color>-->
+    <color name="weather_bg_color_ssp">#707070</color>
+    <color name="weather_cicle_bg_color_ssp">#646464</color>
+    <color name="weather_btn_bg_color_ssp">#585858</color>
+    <color name="weather_iaqi_text_color_ssp">#505050</color>
+    <color name="weather_iaqi_divider_color_ssp">#505050</color>
+    <!--<color name="weather_bottom_bg_start_color_ssp">#1d1d1d</color>
+    <color name="weather_bottom_bg_end_color_ssp">#232323</color>-->
+    <color name="weather_bottom_bg_color_ssp">#646464</color>
+    <color name="weather_bottom_date_text_color_ssp">#505050</color>
+    <!-- 对讲机 -->
+    <color name="backgroud_gray">#f8f8f8</color>
+    <color name="backgroud_white">#FFFFFF</color>
+    <color name="text_red">#ff6b22</color>
+    <color name="text_gray">#666666</color>
+    <color name="choose_place_text">#232528</color>
+    <color name="voice_text">#5f9bf8</color>
+    <color name="house_text">#999999</color>
+
+    <color name="task_coin_add_color">#ff662c</color>
+    <color name="task_coin_reduce_color">#8bc34a</color>
+    <color name="home_shop_sign">#ffffff</color>
+    <color name="home_shop_sign_login">#ff886d</color>
+    <!-- (zzp)城市列表 -->
+    <color name="city_search_bg">#f2f2f2</color>
+    <color name="city_item_letter_color">#8c8c8c</color>
+    <color name="city_item_text_color">#5c5c5c</color>
+    <color name="city_item_divider_color">#dddddc</color>
+    <!-- dialog的样式 -->
+    <color name="dialog_title_color">#333333</color>
+    <color name="dialog_content_color">#495a6d</color>
+    <color name="dialog_divider_color">#ff6a22</color>
+    <color name="dialog_button_text_color">#ff6a22</color>
+    <color name="dialog_button_text_hint">#a6a6a6</color>
+    <!-- 首页 -->
+    <color name="home_catalog_space_color">#f2f2ef</color>
+    <color name="home_item_divider_color">#16000000</color>
+    <color name="home_catalog_title_color">#333333</color>
+    <color name="home_catalog_title_hint_color">#aaaaaa</color>
+    <color name="home_plat_text_hint_color">#aaaaaa</color>
+    <color name="home_custom_main_business_text_color">#666666</color>
+    <color name="home_custom_text_color">#474747</color>
+    <color name="home_ad_orange_text_color">#ff7f30</color>
+    <color name="home_ad_grey_text_color">#aeaeae</color>
+    <color name="home_guess_like_text_color">#333333</color>
+    <color name="home_second_row_text_bg">#f2f2ef</color>
+    <color name="home_second_row_text_first_color">#333333</color>
+    <color name="home_second_row_text_color">#808080</color>
+    <color name="home_news_titletab_text_color">#555</color>
+    <color name="home_news_titletab_orange_color">#ff5b35</color>
+    <color name="home_news_change_orange_color">#ff5b35</color>
+    <color name="home_news_change_gray_color">#aaaaaa</color>
+    <color name="home_news_bg_press_color">#f6f6f6</color>
+    <color name="home_ad3_background_color">#f6f6f6</color>
+    <color name="home_main_background_color">#f6f6f6</color>
+
+
+    <!-- 搜索 -->
+    <color name="search_result_divider_color">#dedfe0</color>
+    <color name="search_result_item_left_color">#000000</color>
+    <color name="search_result_item_right_color">#808080</color>
+    <color name="search_result_item_selected">#19000000</color>
+    <color name="search_result_background">#f5f6f5</color>
+    <color name="search_result_item_header_color">#b9bab9</color>
+
+    //资讯右上角清除字体颜色
+    <color name="message_title_text_color">#000000</color>
+    <color name="message_right_text_color">#ff6a22</color>
+
+    //动态码登录
+    <color name="dynamic_login_verify_color">#ff6a22</color>
+    <color name="dynamic_unlog_verify_color">#a6a6a6</color>
+    <color name="img_verified_unable">#ffffff</color>
+    <!--发现-->
+    <color name="discover_list_divider_line">#f3f3f3</color>
+    <color name="discover_list_divider_lay">#f8f9fa</color>
+    <color name="discover_list_item_title_color">#000000</color>
+    <color name="discover_list_item_desc_color">#808080</color>
+    <color name="discover_list_item_viewc_desc_color">#808080</color>
+    <color name="discover_list_item_viewc_space_color">#a6a6a6</color>
+    <color name="discover_list_item_viewc_price_color">#ff6a22</color>
+
+    <!-- 首页动画-->
+    <color name="title_background_sun">#FF5B3F</color>
+    <color name="title_background_night">#424D85</color>
+    <color name="title_header_background_night">#1a1f35</color>
+    <color name="title_weather_background_sun">#ff552e</color>
+    <color name="title_weather_background_night">#1a1f35</color>
+    <color name="home_house_desc_color">#999999</color>
+    <color name="home_house_title_color">#333333</color>
+    <color name="home_house_attention_succesed">#999999</color>
+    <color name="home_house_attention">#ff5b35</color>
+    <!-- 新首页统一规范-->
+    <color name="home_driver_color">#f3f3f3</color>
+    <!--zxing-->
+    <color name="zxing_viewfinder_mask">#88000000</color>
+    <color name="zxing_result_view">#b0000000</color>
+    <color name="zxing_possible_result_points">#c0ffbd21</color>
+    <color name="zxing_hint_background_color">#a0000000</color>
+
+    <color name="guess_like_item_bg">#ffffff</color>
+    <color name="guess_like_item_click_bg">#f6f6f6</color>
+
+    <color name="home_title_search_content_text_color">#aaaaaa</color>
+
+    <color name="sns_common_bg">#f6f6f6</color>
+    <color name="sns_title">#333333</color>
+    <color name="sns_chat_my_text">#999999</color>
+    <color name="sns_chat_friend_text">#555555</color>
+    <drawable name="sns_list_item_selected">@color/sns_common_bg</drawable>
+    <drawable name="sns_list_item_normal">@color/white</drawable>
+    <color name="sns_desc">#999998</color>
+    <color name="sns_unchangeable">#999999</color>
+    <color name="sns_profile_item">#555555</color>
+    <color name="sns_profile_content">#333333</color>
+    <color name="sns_input_dialog_right_done_enable_color">#ff552e</color>
+    <color name="sns_input_dialog_right_done_no_enable_color">#999999</color>
+
+    <color name="card_bg">#EBEBEB</color>
+    <color name="card_outline">#D0D0CE</color>
+    <color name="sns_dashan_msg_color">#555555</color>
+    <color name="sns_intersts_text_sel_color">#ff5522</color>
+    <color name="sns_accost_card_image_bg">#ebebeb</color>
+
+    <color name="discover_item_press">#f6f6f6</color>
+    <color name="discover_item_nomarl">#ffffff</color>
+    <color name="leading_bg_color">#fdebc8</color>
+    <color name="leading_shake_bg_color">#e60012</color>
+</resources>
