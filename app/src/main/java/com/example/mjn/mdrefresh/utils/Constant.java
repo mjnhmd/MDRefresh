@@ -8,7 +8,7 @@ public class Constant {
     public static final int RELEASE_ANIMATION_DURATION = 500 ;  //释放后Scroller恢复到初始位置的时长
     public static final int REFRESH_DURATION = 1400;    //在顶部刷新的时间
     public static final int SUN_DOWN_ANIMATION_DURATION = RELEASE_ANIMATION_DURATION - 100;  //太阳下山的时间
-    public static final int ANIMATION_TIMEOUT_DURATION = 3000;
+    public static final int ANIMATION_TIMEOUT_DURATION = 4000;
 
     public static final int TOTAL_DRAG_DISTANCE = 290;   //拖拽距离
     public static final int DEFAULT_HEADER_HEIGHT = 115;   //默认header高度

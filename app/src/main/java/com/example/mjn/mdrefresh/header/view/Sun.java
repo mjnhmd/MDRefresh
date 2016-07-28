@@ -194,7 +194,6 @@ public class Sun extends Drawable{
                     mBeginSunDown = true;
                     mIsOnTheTop = false;
                     setupSunDownAnimations(true);
-                    mIsRefreshComplete = false;
                 } else {
                     if (mIsAnimationStarted) {
                         //重置动画时不再执行
@@ -209,6 +208,7 @@ public class Sun extends Drawable{
 
             }
         });
+        mIsRefreshComplete = false;
         mParent.startAnimation(sunRotateAnimation);
         mParent.postDelayed(new Runnable() {
             @Override
