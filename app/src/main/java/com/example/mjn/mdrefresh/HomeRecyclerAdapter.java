@@ -45,10 +45,6 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapte
         }
     }
 
-    public String getValueAt(int position) {
-        return mValues.get(position);
-    }
-
     public HomeRecyclerAdapter(Context context, List<String> items) {
         context.getTheme().resolveAttribute(R.attr.selectableItemBackground, mTypedValue, true);
         mBackground = mTypedValue.resourceId;

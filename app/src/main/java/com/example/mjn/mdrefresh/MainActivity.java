@@ -1,17 +1,13 @@
 package com.example.mjn.mdrefresh;
 
-import android.os.AsyncTask;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.example.mjn.mdrefresh.header.RentalsSunHeaderView;
-import com.example.mjn.mdrefresh.utils.Cheeses;
 import com.example.mjn.mdrefresh.utils.Constant;
 
 public class MainActivity extends AppCompatActivity implements IMainView{
