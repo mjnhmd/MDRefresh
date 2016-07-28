@@ -13,6 +13,7 @@ import java.util.Random;
 
 /**
  * Created by mengjingnan on 16/7/25.
+ *
  */
 public class MainPresenter implements RefreshListener{
     IMainView mMainView;

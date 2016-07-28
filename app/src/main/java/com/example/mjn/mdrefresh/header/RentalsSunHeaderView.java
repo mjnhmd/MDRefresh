@@ -14,7 +14,6 @@ import android.view.View;
 import com.example.mjn.mdrefresh.R;
 import com.example.mjn.mdrefresh.RefreshListener;
 import com.example.mjn.mdrefresh.header.view.Building;
-import com.example.mjn.mdrefresh.header.view.Sky;
 import com.example.mjn.mdrefresh.header.view.Sun;
 import com.example.mjn.mdrefresh.utils.Constant;
 
@@ -28,7 +27,6 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
 
     private int offset;
 
-    private Sky mSky;
     private Sun mSun;
     private Building mBuilding;
     private AppBarLayout mAppBarLayout;
@@ -92,7 +90,6 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
     }
 
     private void createBitmaps(Context context) {
-        mSky = new Sky(context,this,mScreenWidth,mSkyHeight);
         mBuilding = new Building(context,this);
         mSun = new Sun(context,0,mSunTopOffset,mScreenWidth,this);
     }
@@ -131,7 +128,6 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
     @Override
     protected void onDraw(Canvas canvas) {
         final int saveCount = canvas.save();
-        mSky.draw(canvas);
         mSun.draw(canvas);
         mBuilding.draw(canvas);
         canvas.restoreToCount(saveCount);
