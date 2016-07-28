@@ -16,7 +16,6 @@ import android.view.animation.Transformation;
 import com.example.mjn.mdrefresh.R;
 import com.example.mjn.mdrefresh.header.RentalsSunHeaderView;
 import com.example.mjn.mdrefresh.utils.Constant;
-import com.example.mjn.mdrefresh.utils.PtrLocalDisplay;
 
 /**
  * Created by Administrator on 2015/10/10.
@@ -83,7 +82,7 @@ public class Sun extends Drawable{
         mParent = parent;
         mSun = BitmapFactory.decodeResource(context.getResources(), R.drawable.moon);
         mMatrix = new Matrix();
-        mTotalDragDistance = PtrLocalDisplay.dp2px(Constant.TOTAL_DRAG_DISTANCE);
+        mTotalDragDistance = Constant.dp2px(Constant.TOTAL_DRAG_DISTANCE);
     }
     public Sun(Context context,float startOffsetX,float startmOffsetY,float diameter,RentalsSunHeaderView parent){
         this(context,parent);
@@ -125,7 +124,7 @@ public class Sun extends Drawable{
 
         float mOffsetY;
         if(!mIsOnTheTop ) {
-            mOffsetY = (float) (mStartmOffsetY - mStartmOffsetY * 0.7 * Math.sin(angle) - mSunSize/2) + (mTotalDragDistance - mCanvasTop)-offset + PtrLocalDisplay.dp2px(115);
+            mOffsetY = (float) (mStartmOffsetY - mStartmOffsetY * 0.7 * Math.sin(angle) - mSunSize/2) + (mTotalDragDistance - mCanvasTop)-offset + Constant.dp2px(115);
             mOffsetX = (float) (mDiameter / 2 - (mDiameter + mSunSize) / 2 * Math.cos(angle) - mSunSize/2);
 
             if(mOffsetX >= mDiameter / 2 - mSunSize/2 && !mIsDragRelease){
@@ -135,7 +134,7 @@ public class Sun extends Drawable{
             }
 
         }else{
-            mOffsetY = (float) (mStartmOffsetY - mStartmOffsetY * 0.7 - mSunSize/2)+ (mTotalDragDistance - mCanvasTop)-offset + PtrLocalDisplay.dp2px(115) ;
+            mOffsetY = (float) (mStartmOffsetY - mStartmOffsetY * 0.7 - mSunSize/2)+ (mTotalDragDistance - mCanvasTop)-offset + Constant.dp2px(115) ;
             mOffsetX = (float) mDiameter/2 - mSunSize/2;
             if(angle < 3.14/2 && !mIsAnimationStarted && !mIsDragRelease){
                 mIsOnTheTop = false;

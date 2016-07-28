@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.example.mjn.mdrefresh.header.RentalsSunHeaderView;
 import com.example.mjn.mdrefresh.utils.Cheeses;
 import com.example.mjn.mdrefresh.utils.Constant;
-import com.example.mjn.mdrefresh.utils.PtrLocalDisplay;
 
 public class MainActivity extends AppCompatActivity implements IMainView{
     private RentalsSunHeaderView sunHeaderView;
@@ -32,12 +31,13 @@ public class MainActivity extends AppCompatActivity implements IMainView{
     }
 
     private void initView() {
+        Constant.init(this);
         CoordinatorLayout mCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorlyuout);
         sunHeaderView = (RentalsSunHeaderView) findViewById(R.id.sunheaderview);
         mAppBarLayout = (AppBarLayout) findViewById(R.id.headview);
         sunHeaderView.setCoordinatorLayout(mCoordinatorLayout);
         RecyclerView mHomeListView = (RecyclerView) findViewById(R.id.home_layout_listview);
-        mTotalDragHeight = PtrLocalDisplay.dp2px(405) - PtrLocalDisplay.dp2px(Constant.DEFAULT_HEADER_HEIGHT);
+        mTotalDragHeight = Constant.dp2px(405) - Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT);
         sunHeaderView.setRefreshListener(mPresenter);
         //让view滚动到默认位置
         mAppBarLayout.post(new Runnable() {

@@ -17,7 +17,6 @@ import com.example.mjn.mdrefresh.header.view.Building;
 import com.example.mjn.mdrefresh.header.view.Sky;
 import com.example.mjn.mdrefresh.header.view.Sun;
 import com.example.mjn.mdrefresh.utils.Constant;
-import com.example.mjn.mdrefresh.utils.PtrLocalDisplay;
 
 
 public class RentalsSunHeaderView extends View implements View.OnTouchListener, AppBarLayout.OnOffsetChangedListener{
@@ -85,10 +84,10 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
 
 
     private void initiateDimens() {
-        PtrLocalDisplay.init(mContext);
-        int mTotalDefaultHeight = PtrLocalDisplay.dp2px(Constant.DEFAULT_HEADER_HEIGHT);
+        Constant.init(mContext);
+        int mTotalDefaultHeight = Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT);
         mScreenWidth = getContext().getResources().getDisplayMetrics().widthPixels;
-        mSkyHeight = PtrLocalDisplay.dp2px(Constant.SKY_HEIGHT);
+        mSkyHeight = Constant.dp2px(Constant.SKY_HEIGHT);
         mSunTopOffset = (mTotalDefaultHeight * DEFAULT_SUNRISE_TOP_PERCENT);
     }
 
@@ -113,7 +112,7 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
 
     public void setOffset(int offset){
         mSun.setmOffset(offset);
-        float percent = (offset-PtrLocalDisplay.dp2px(Constant.DEFAULT_HEADER_HEIGHT))/(PtrLocalDisplay.dp2px(100)*1.0f);
+        float percent = (offset-Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT))/(Constant.dp2px(100)*1.0f);
         mSun.setDragPercent(percent);
         mSun.setRotate(percent);
         mBuilding.setDragPercent(percent);
@@ -149,8 +148,8 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
 
     @Override
     public void onOffsetChanged(AppBarLayout appBarLayout, int i) {
-        offset = PtrLocalDisplay.dp2px(Constant.TOTAL_DRAG_DISTANCE+Constant.DEFAULT_HEADER_HEIGHT)+i;
-        if (offset <= PtrLocalDisplay.dp2px(Constant.DEFAULT_HEADER_HEIGHT)){
+        offset = Constant.dp2px(Constant.TOTAL_DRAG_DISTANCE+Constant.DEFAULT_HEADER_HEIGHT)+i;
+        if (offset <= Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT)){
             resetOriginals();
         }
         setOffset(offset);
@@ -175,18 +174,18 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
         if (event.getAction() == MotionEvent.ACTION_UP){
             setIsReleaseDrag(true);
             //第一阶段，回弹到顶
-            if (offset<PtrLocalDisplay.dp2px(Constant.DEFAULT_HEADER_HEIGHT)){
+            if (offset<Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT)){
                 smoothTo(offset,mAppBarLayout);
-            } else if (offset<PtrLocalDisplay.dp2px(Constant.RETURN_TO_DEFAULT_HEIGHT)){
+            } else if (offset<Constant.dp2px(Constant.RETURN_TO_DEFAULT_HEIGHT)){
                 //第二阶段，回弹到默认高度
-                smoothTo(offset - PtrLocalDisplay.dp2px(Constant.DEFAULT_HEADER_HEIGHT),mAppBarLayout);
+                smoothTo(offset - Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT),mAppBarLayout);
                 Log.d("aaaad", "event.getY()" + event.getY() + " - touchY    " + touchY);
                 if ((event.getY()- touchY)<0){
                     return true;
                 }
             //第三阶段，执行刷新
             } else {
-                smoothTo(offset - PtrLocalDisplay.dp2px(Constant.RETURN_TO_DEFAULT_HEIGHT),mAppBarLayout);
+                smoothTo(offset - Constant.dp2px(Constant.RETURN_TO_DEFAULT_HEIGHT),mAppBarLayout);
                 mRefreshListener.onRefreshStart();
             }
         }
@@ -194,7 +193,7 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
     }
 
     public void smoothTo(){
-        smoothTo(offset - PtrLocalDisplay.dp2px(Constant.DEFAULT_HEADER_HEIGHT), mAppBarLayout);
+        smoothTo(offset - Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT), mAppBarLayout);
     }
     public void smoothTo(int offset,View view){
         ViewCompat.postOnAnimation(view, new OffsetRunnable(offset, view));

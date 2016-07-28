@@ -11,7 +11,6 @@ import android.view.View;
 
 import com.example.mjn.mdrefresh.R;
 import com.example.mjn.mdrefresh.utils.Constant;
-import com.example.mjn.mdrefresh.utils.PtrLocalDisplay;
 
 
 /**
@@ -41,7 +40,7 @@ public class Building extends Drawable {
 
     public Building(Context context,View parent) {
         mContext = context;
-        mInitHeaderHeight = PtrLocalDisplay.dp2px(Constant.SKY_HEIGHT);
+        mInitHeaderHeight = Constant.dp2px(Constant.SKY_HEIGHT);
         mScreenWidth = context.getResources().getDisplayMetrics().widthPixels;
 
         setImageResource(R.drawable.home_title_building_default);
@@ -52,8 +51,8 @@ public class Building extends Drawable {
             mBuildingWidth = mBuilding.getWidth();
             mBuildingHeight = mBuilding.getHeight();
         }
-        mShowWidth = PtrLocalDisplay.dp2px(300);
-        mShowHeight = PtrLocalDisplay.dp2px(100);
+        mShowWidth = Constant.dp2px(300);
+        mShowHeight = Constant.dp2px(100);
 
         // ImageView CenterCrop
         mDrawMatrix = new Matrix();
