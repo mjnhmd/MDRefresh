@@ -13,8 +13,8 @@ import android.view.View;
 
 import com.example.mjn.mdrefresh.R;
 import com.example.mjn.mdrefresh.RefreshListener;
-import com.example.mjn.mdrefresh.header.view.Building;
-import com.example.mjn.mdrefresh.header.view.Sun;
+import com.example.mjn.mdrefresh.RefreshUIListener;
+import com.example.mjn.mdrefresh.UIListenerHolder;
 import com.example.mjn.mdrefresh.utils.Constant;
 
 
@@ -22,20 +22,22 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
     private int mScreenWidth;
     private int mSkyHeight;
     private float mSunTopOffset;
+    private UIListenerHolder mUIListenerHolder = new UIListenerHolder();
 
     private VelocityTracker mVelocityTracker;
 
     private int offset;
 
-    private Sun mSun;
-    private Building mBuilding;
     private AppBarLayout mAppBarLayout;
     private CoordinatorLayout mCoordinatorLayout;
     private Context mContext;
     public static final float DEFAULT_SUNRISE_TOP_PERCENT = 0.9f;
     private RefreshListener mRefreshListener;
+    private boolean mCanTouch;
 
-
+    public void setRefreshUIListener(RefreshUIListener listener){
+        mUIListenerHolder.addListener(listener);
+    }
 
     public void setRefreshListener(RefreshListener refreshListener){
         mRefreshListener = refreshListener;
@@ -48,11 +50,11 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
     }
 
     public void setIsReleaseDrag(boolean isReleaseDrag){
-        this.mSun.setIsDragRelease(isReleaseDrag);
+        mUIListenerHolder.setIsReleaseDrag(isReleaseDrag);
     }
 
     public boolean getCanTouch(){
-       return mSun.getCanTouch();
+       return mCanTouch;
    }
 
     public RentalsSunHeaderView(Context context, AttributeSet attrs) {
@@ -60,7 +62,6 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
         mContext = context;
         mVelocityTracker = VelocityTracker.obtain();
         initiateDimens();
-        createBitmaps(context);
     }
 
     public RentalsSunHeaderView(Context context) {
@@ -68,7 +69,6 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
         mContext = context;
         mVelocityTracker = VelocityTracker.obtain();
         initiateDimens();
-        createBitmaps(context);
     }
 
 
@@ -77,7 +77,6 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
         super(context, attrs, defStyleAttr);
         mContext = context;
         initiateDimens();
-        createBitmaps(context);
     }
 
 
@@ -89,30 +88,15 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
         mSunTopOffset = (mTotalDefaultHeight * DEFAULT_SUNRISE_TOP_PERCENT);
     }
 
-    private void createBitmaps(Context context) {
-        mBuilding = new Building(context,this);
-        mSun = new Sun(context,0,mSunTopOffset,mScreenWidth,this);
-    }
-
+    @Override
     public void offsetTopAndBottom(int offset) {
-        mSun.setCanvasTop(offset);
+        mUIListenerHolder.offsetTopAndBottom(offset);
     }
 
-    public void resetOriginals() {
-        this.clearAnimation();
-        setOffset(0);
-        setIsReleaseDrag(false);
-        mSun.reset();
-        invalidate();
-    }
 
 
     public void setOffset(int offset){
-        mSun.setmOffset(offset);
-        float percent = (offset-Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT))/(Constant.dp2px(100)*1.0f);
-        mSun.setDragPercent(percent);
-        mSun.setRotate(percent);
-        mBuilding.setDragPercent(percent);
+        mUIListenerHolder.setOffset(offset);
         this.invalidate();
 
     }
@@ -128,25 +112,26 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
     @Override
     protected void onDraw(Canvas canvas) {
         final int saveCount = canvas.save();
-        mSun.draw(canvas);
-        mBuilding.draw(canvas);
+        mUIListenerHolder.draw(canvas);
         canvas.restoreToCount(saveCount);
     }
 
     public void refreshBegin() {
+        mCanTouch = false;
         setOffset(offset);
         invalidate();
     }
 
     public void refreshComplete() {
-        mSun.refreshComplete();
+        mCanTouch = true;
+        mUIListenerHolder.refreshComplete();
     }
 
     @Override
     public void onOffsetChanged(AppBarLayout appBarLayout, int i) {
         offset = Constant.dp2px(Constant.TOTAL_DRAG_DISTANCE+Constant.DEFAULT_HEADER_HEIGHT)+i;
         if (offset <= Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT)){
-            resetOriginals();
+            mUIListenerHolder.resetOriginals();
         }
         setOffset(offset);
     }

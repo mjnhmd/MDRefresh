@@ -14,6 +14,7 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.Transformation;
 
 import com.example.mjn.mdrefresh.R;
+import com.example.mjn.mdrefresh.RefreshUIListener;
 import com.example.mjn.mdrefresh.header.RentalsSunHeaderView;
 import com.example.mjn.mdrefresh.utils.Constant;
 
@@ -21,7 +22,7 @@ import com.example.mjn.mdrefresh.utils.Constant;
  * Created by Administrator on 2015/10/10.
  *
  */
-public class Sun extends Drawable{
+public class Sun extends Drawable implements RefreshUIListener {
     private float mOffsetX;
     private float mStartmOffsetY;
     private float mSunSize;
@@ -50,10 +51,6 @@ public class Sun extends Drawable{
     private Animation sunRotateAnimation;
     private Interpolator linearInterpolator = new LinearInterpolator();
 
-    public void setCanvasTop(float top){
-        this.mCanvasTop = top;
-    }
-
     public void setDragPercent(float dragPercent){
         this.mDragPercent = dragPercent;
     }
@@ -62,16 +59,23 @@ public class Sun extends Drawable{
         this.mRotate = rotate;
     }
 
-    public void setIsDragRelease(boolean release){
-        this.mIsDragRelease = release;
-    }
-
-    public boolean getCanTouch(){
-        return  mCanTouch;
-    }
-
     public void refreshComplete(){
         mIsRefreshComplete = true;
+    }
+
+    @Override
+    public void resetOriginals() {
+        reset();
+    }
+
+    @Override
+    public void offsetTopAndBottom(int offset) {
+        this.mCanvasTop = offset;
+    }
+
+    @Override
+    public void setIsReleaseDrag(boolean isReleaseDrag) {
+        this.mIsDragRelease = isReleaseDrag;
     }
 
     public void setmOffset(int offset){
@@ -96,6 +100,14 @@ public class Sun extends Drawable{
     public Sun(Context context,float startOffsetX,float startOffsetY,float sunSize,float diameter,RentalsSunHeaderView parent){
         this(context,startOffsetX,startOffsetY,diameter,parent);
         this.mSunSize = sunSize;
+    }
+
+    @Override
+    public void setOffset(int offset) {
+        setmOffset(offset);
+        float percent = (offset-Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT))/(Constant.dp2px(100)*1.0f);
+        setDragPercent(percent);
+        setRotate(percent);
     }
 
     @Override

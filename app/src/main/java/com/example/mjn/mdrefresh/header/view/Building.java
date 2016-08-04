@@ -10,6 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import com.example.mjn.mdrefresh.R;
+import com.example.mjn.mdrefresh.RefreshUIListener;
 import com.example.mjn.mdrefresh.utils.Constant;
 
 
@@ -17,7 +18,7 @@ import com.example.mjn.mdrefresh.utils.Constant;
  * Created by Administrator on 2015/10/10.
  *
  */
-public class Building extends Drawable {
+public class Building extends Drawable implements RefreshUIListener{
 
     private Context mContext;
 
@@ -97,6 +98,12 @@ public class Building extends Drawable {
 
 
     @Override
+    public void setOffset(int offset) {
+        float percent = (offset-Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT))/(Constant.dp2px(100)*1.0f);
+        setDragPercent(percent);
+    }
+
+    @Override
     public void draw(Canvas canvas) {
         //如果bitmap decode失败了的话，直接不绘制
         if(mBuilding == null){
@@ -109,6 +116,26 @@ public class Building extends Drawable {
         canvas.clipRect(0, 0, mShowWidth, mShowHeight);
         canvas.drawBitmap(mBuilding, mDrawMatrix, null);
         canvas.restore();
+    }
+
+    @Override
+    public void refreshComplete() {
+
+    }
+
+    @Override
+    public void resetOriginals() {
+
+    }
+
+    @Override
+    public void offsetTopAndBottom(int offset) {
+
+    }
+
+    @Override
+    public void setIsReleaseDrag(boolean isReleaseDrag) {
+
     }
 
     @Override
