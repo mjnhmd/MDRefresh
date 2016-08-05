@@ -10,7 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import com.example.mjn.mdrefresh.R;
-import com.example.mjn.mdrefresh.RefreshUIListener;
+import com.example.mjn.mdrefresh.header.RefreshUIListener;
 import com.example.mjn.mdrefresh.utils.Constant;
 
 

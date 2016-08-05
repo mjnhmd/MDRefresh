@@ -6,8 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MotionEvent;
+import android.view.View;
 
 import com.example.mjn.mdrefresh.header.RentalsSunHeaderView;
+import com.example.mjn.mdrefresh.header.view.Building;
+import com.example.mjn.mdrefresh.header.view.Sun;
 import com.example.mjn.mdrefresh.utils.Constant;
 
 public class MainActivity extends AppCompatActivity implements IMainView{
@@ -48,6 +52,17 @@ public class MainActivity extends AppCompatActivity implements IMainView{
             mHomeListView.setAdapter(new HomeRecyclerAdapter(this, mPresenter.getRandomSublist(30)));
             mHomeListView.setOnTouchListener(sunHeaderView);
         }
+        sunHeaderView.setRefreshUIListener(new Sun(this,sunHeaderView));
+        sunHeaderView.setRefreshUIListener(new Building(this,sunHeaderView));
+        mAppBarLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_MOVE){
+                    return true;
+                }
+                return false;
+            }
+        });
 
     }
 

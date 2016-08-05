@@ -12,18 +12,12 @@ import android.view.VelocityTracker;
 import android.view.View;
 
 import com.example.mjn.mdrefresh.R;
-import com.example.mjn.mdrefresh.RefreshListener;
-import com.example.mjn.mdrefresh.RefreshUIListener;
-import com.example.mjn.mdrefresh.UIListenerHolder;
 import com.example.mjn.mdrefresh.utils.Constant;
 
 
 public class RentalsSunHeaderView extends View implements View.OnTouchListener, AppBarLayout.OnOffsetChangedListener{
-    private int mScreenWidth;
     private int mSkyHeight;
-    private float mSunTopOffset;
     private UIListenerHolder mUIListenerHolder = new UIListenerHolder();
-
     private VelocityTracker mVelocityTracker;
 
     private int offset;
@@ -33,7 +27,7 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
     private Context mContext;
     public static final float DEFAULT_SUNRISE_TOP_PERCENT = 0.9f;
     private RefreshListener mRefreshListener;
-    private boolean mCanTouch;
+    private boolean mCanTouch = true;
 
     public void setRefreshUIListener(RefreshUIListener listener){
         mUIListenerHolder.addListener(listener);
@@ -83,9 +77,7 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
     private void initiateDimens() {
         Constant.init(mContext);
         int mTotalDefaultHeight = Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT);
-        mScreenWidth = getContext().getResources().getDisplayMetrics().widthPixels;
         mSkyHeight = Constant.dp2px(Constant.SKY_HEIGHT);
-        mSunTopOffset = (mTotalDefaultHeight * DEFAULT_SUNRISE_TOP_PERCENT);
     }
 
     @Override
@@ -117,7 +109,6 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
     }
 
     public void refreshBegin() {
-        mCanTouch = false;
         setOffset(offset);
         invalidate();
     }
@@ -136,11 +127,22 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
         setOffset(offset);
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return dealTouchEvent(event);
+    }
+
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
+        return dealTouchEvent(event);
+    }
+
+    private boolean dealTouchEvent(MotionEvent event){
+        Log.d("aaaad", "onTouch  " + mCanTouch);
         float touchY = 0;
         if (!getCanTouch()){
+            Log.d("aaaad", "onTouch");
             return true;
         }
         mVelocityTracker.addMovement(event);
@@ -164,9 +166,10 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
                 if ((event.getY()- touchY)<0){
                     return true;
                 }
-            //第三阶段，执行刷新
+                //第三阶段，执行刷新
             } else {
                 smoothTo(offset - Constant.dp2px(Constant.RETURN_TO_DEFAULT_HEIGHT),mAppBarLayout);
+                mCanTouch = false;
                 mRefreshListener.onRefreshStart();
             }
         }

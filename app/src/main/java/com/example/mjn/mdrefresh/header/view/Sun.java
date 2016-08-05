@@ -14,7 +14,7 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.Transformation;
 
 import com.example.mjn.mdrefresh.R;
-import com.example.mjn.mdrefresh.RefreshUIListener;
+import com.example.mjn.mdrefresh.header.RefreshUIListener;
 import com.example.mjn.mdrefresh.header.RentalsSunHeaderView;
 import com.example.mjn.mdrefresh.utils.Constant;
 
@@ -23,6 +23,7 @@ import com.example.mjn.mdrefresh.utils.Constant;
  *
  */
 public class Sun extends Drawable implements RefreshUIListener {
+    public static final float DEFAULT_SUNRISE_TOP_PERCENT = 0.9f;
     private float mOffsetX;
     private float mStartmOffsetY;
     private float mSunSize;
@@ -81,15 +82,11 @@ public class Sun extends Drawable implements RefreshUIListener {
     public void setmOffset(int offset){
         this.offset = offset;
     }
-
-    public Sun(Context context,RentalsSunHeaderView parent) {
+    public Sun(Context context,float startOffsetX,float startmOffsetY,float diameter,RentalsSunHeaderView parent){
         mParent = parent;
         mSun = BitmapFactory.decodeResource(context.getResources(), R.drawable.moon);
         mMatrix = new Matrix();
         mTotalDragDistance = Constant.dp2px(Constant.TOTAL_DRAG_DISTANCE);
-    }
-    public Sun(Context context,float startOffsetX,float startmOffsetY,float diameter,RentalsSunHeaderView parent){
-        this(context,parent);
         this.mStartmOffsetY = startmOffsetY;
         if(mSun != null) {
             this.mSunSize = mSun.getWidth();
@@ -97,6 +94,11 @@ public class Sun extends Drawable implements RefreshUIListener {
         this.mDiameter = diameter;
 
     }
+
+    public Sun(Context context,RentalsSunHeaderView parent) {
+        this(context,0,(int) (Constant.dp2px(Constant.DEFAULT_HEADER_HEIGHT) * DEFAULT_SUNRISE_TOP_PERCENT),context.getResources().getDisplayMetrics().widthPixels,parent);
+    }
+
     public Sun(Context context,float startOffsetX,float startOffsetY,float sunSize,float diameter,RentalsSunHeaderView parent){
         this(context,startOffsetX,startOffsetY,diameter,parent);
         this.mSunSize = sunSize;

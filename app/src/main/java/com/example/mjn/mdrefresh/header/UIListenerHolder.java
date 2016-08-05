@@ -1,7 +1,8 @@
-package com.example.mjn.mdrefresh;
+package com.example.mjn.mdrefresh.header;
 
 import android.graphics.Canvas;
-import android.util.SparseArray;
+
+import com.example.mjn.mdrefresh.header.RefreshUIListener;
 
 import java.util.ArrayList;
 import java.util.List;

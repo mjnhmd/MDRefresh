@@ -14,7 +14,7 @@
         android:layout_height="405dp"
         android:background="@color/title_background_night"
         app:elevation="0dp"
-        app:layout_behavior="com.example.mjn.mdrefresh.CustomAppbarBehavior">
+        app:layout_behavior="com.example.mjn.mdrefresh.header.CustomAppbarBehavior">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"

@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.mjn.mdrefresh.header.RefreshListener;
 import com.example.mjn.mdrefresh.utils.Cheeses;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import java.util.Random;
  * Created by mengjingnan on 16/7/25.
  *
  */
-public class MainPresenter implements RefreshListener{
+public class MainPresenter implements RefreshListener {
     IMainView mMainView;
     Context mContext;
 
