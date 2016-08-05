@@ -128,12 +128,6 @@ public class RentalsSunHeaderView extends View implements View.OnTouchListener, 
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return dealTouchEvent(event);
-    }
-
-
-    @Override
     public boolean onTouch(View v, MotionEvent event) {
         return dealTouchEvent(event);
     }
